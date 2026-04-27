@@ -13,7 +13,7 @@ let isPro = false;
 let pendingInvoiceToSave = null;
 
 // API Base URL (Update with your backend port)
-const API_BASE = 'https://localhost:7218/api';
+const API_BASE = 'https://localhost:7011/api';
 
 // Currency helper functions
 function getCurrencySymbol() {
