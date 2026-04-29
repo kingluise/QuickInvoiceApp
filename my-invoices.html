@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickInvoice | My Invoices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/invoices.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="app-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="invoice-builder.html" class="logo-link">
+                    <div class="logo-icon">⚡</div>
+                    <h2>QuickInvoice</h2>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="invoice-builder.html" class="nav-link">Create Invoice</a>
+                <a href="my-invoices.html" class="nav-link active">My Invoices</a>
+                <a href="upgrade.html" class="nav-link">Upgrade</a>
+            </div>
+            <div class="user-section">
+                <i class="fas fa-user-circle"></i>
+                <span id="userNameDisplay" class="user-name"></span>
+                <span id="proBadge" class="badge free">Free Plan</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-history"></i>
+                <h3>My Saved Invoices</h3>
+                <span id="invoiceCount" class="invoice-count"></span>
+            </div>
+            <div id="invoicesList" class="invoices-list">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invoice Preview Modal -->
+    <div id="invoiceModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Invoice Preview</h3>
+                <button class="modal-close" onclick="closeInvoiceModal()">&times;</button>
+            </div>
+            <div id="modalInvoiceContent"></div>
+            <div class="modal-actions">
+                <button class="btn-pdf" onclick="downloadModalPDF()">
+                    <i class="fas fa-file-pdf"></i> Download PDF
+                </button>
+                <button class="btn-whatsapp" onclick="shareInvoice()">
+                    <i class="fab fa-whatsapp"></i> Share via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/invoices.js"></script>
+</body>
+</html>

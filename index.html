@@ -2,495 +2,461 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>QuickInvoice | Professional Invoicing Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickInvoice | Professional Invoicing for African Businesses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
-    <!-- Landing Page (Visible First) -->
-    <div id="landingPage" class="landing-page active">
-        <!-- Hero Section -->
-        <nav class="landing-nav">
-            <div class="nav-container">
-                <div class="logo">
+    <!-- Navigation -->
+    <nav class="landing-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <h2>QuickInvoice</h2>
+            </div>
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn-outline">Login</a>
+                <a href="dashboard.html?signup=true" class="btn-primary">Start Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Device Mockups -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-new">🔥 NEW</span>
+                <span class="badge-text">WhatsApp invoicing coming soon</span>
+            </div>
+            <h1>Create professional invoices <span class="gradient-text">in seconds</span></h1>
+            <p>The fastest way to create, save, and share professional invoices. Web form, WhatsApp, or voice - you choose.</p>
+
+            <div class="hero-buttons">
+                <a href="dashboard.html" class="btn-large">
+                    <i class="fas fa-bolt"></i> Start Creating Free
+                </a>
+                <a href="#pricing" class="btn-large-outline">
+                    <i class="fas fa-crown"></i> View Pricing
+                </a>
+            </div>
+
+            <div class="trust-stats">
+                <div class="stat">
+                    <strong>500+</strong>
+                    <span>Active users</span>
+                </div>
+                <div class="stat">
+                    <strong>2,100+</strong>
+                    <span>Invoices generated</span>
+                </div>
+                <div class="stat">
+                    <strong>$5M+</strong>
+                    <span>Total invoiced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-preview">
+            <div class="device-mockup">
+                <!-- Laptop Mockup -->
+                <div class="laptop-mockup">
+                    <div class="laptop-screen">
+                        <div class="laptop-screen-inner">
+                            <div class="mini-invoice">
+                                <div class="mini-invoice-header">
+                                    <div class="mini-invoice-logo">⚡</div>
+                                    <span class="mini-invoice-business">Your Business</span>
+                                    <span class="mini-invoice-number">#INV-001</span>
+                                </div>
+                                <div class="mini-invoice-client">
+                                    <strong>Bill To:</strong>
+                                    <p>Client Name</p>
+                                </div>
+                                <div class="mini-invoice-items">
+                                    <div class="mini-item">
+                                        <span>Web Design Service</span>
+                                        <span>₦50,000</span>
+                                    </div>
+                                    <div class="mini-item">
+                                        <span>Subtotal</span>
+                                        <span>₦50,000</span>
+                                    </div>
+                                    <div class="mini-item">
+                                        <span>Tax (7.5%)</span>
+                                        <span>₦3,750</span>
+                                    </div>
+                                    <div class="mini-item total">
+                                        <span>Total</span>
+                                        <span>₦53,750</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="laptop-keyboard"></div>
+                </div>
+
+                <!-- Phone Mockup -->
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="mini-invoice">
+                            <div class="mini-invoice-header">
+                                <span class="mini-invoice-business">Your Biz</span>
+                            </div>
+                            <div class="mini-invoice-items">
+                                <div class="mini-item">
+                                    <span>Web Design</span>
+                                    <span>₦50k</span>
+                                </div>
+                                <div class="mini-item total">
+                                    <span>Total</span>
+                                    <span>₦53,750</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-home-bar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Input Options Section -->
+    <section class="input-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Multiple ways to <span class="gradient-text">create invoices</span></h2>
+                <p>Choose what works best for you</p>
+            </div>
+            <div class="options-grid">
+                <a href="dashboard.html" class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Web Form</h3>
+                    <p>Create invoices directly on our website with our intuitive form</p>
+                    <span class="option-tag">Available Now</span>
+                </a>
+                <div class="option-card coming-soon">
+                    <div class="option-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Bot</h3>
+                    <p>Send a message on WhatsApp and get an instant invoice</p>
+                    <span class="option-tag">Coming Soon</span>
+                </div>
+                <div class="option-card coming-soon">
+                    <div class="option-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Voice Input</h3>
+                    <p>Speak your invoice details - AI does the rest</p>
+                    <span class="option-tag">Coming Soon (Pro)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How it works</h2>
+                <p>Three simple steps to get paid faster</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-pen-ruler"></i></div>
+                    <h3>Fill the form</h3>
+                    <p>Enter your business and client details in our easy-to-use form</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Preview live</h3>
+                    <p>See your invoice update in real-time as you type</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-download"></i></div>
+                    <h3>Download or save</h3>
+                    <p>Download PDF or save to your account for later</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why choose QuickInvoice</h2>
+                <p>Everything you need to create professional invoices</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Create invoices in seconds with our intuitive builder</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>PDF Export</h3>
+                    <p>Download professional PDF invoices instantly</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Auto Calculations</h3>
+                    <p>Automatic tax, discount, and total calculation</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Cloud Storage</h3>
+                    <p>Save and access your invoices from anywhere</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Sharing</h3>
+                    <p>Share invoices directly with clients</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Tax Compliance</h3>
+                    <p>Nigeria VAT (7.5%) and multi-currency support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built for Africa Section -->
+    <section class="africa-section">
+        <div class="container">
+            <div class="africa-content">
+                <div class="africa-text">
+                    <h2>Built for <span class="gradient-text">African businesses</span></h2>
+                    <p>Designed for African SMEs who invoice in multiple currencies. Nigeria VAT, Ghana taxes, and growing tax compliance for all African markets.</p>
+                    <div class="country-flags">
+                        <span><i class="fas fa-flag-checkered"></i> Nigeria (7.5% VAT)</span>
+                        <span><i class="fas fa-flag-checkered"></i> Ghana</span>
+                        <span><i class="fas fa-flag-checkered"></i> Kenya</span>
+                        <span><i class="fas fa-flag-checkered"></i> UK</span>
+                        <span><i class="fas fa-flag-checkered"></i> US</span>
+                        <span><i class="fas fa-globe"></i> 150+ currencies</span>
+                    </div>
+                </div>
+                <div class="africa-demo">
+                    <div class="demo-card">
+                        <div class="demo-amount">
+                            <div class="label">Total invoiced by users</div>
+                            <div class="amount">$5M+</div>
+                        </div>
+                        <div class="demo-stats">
+                            <div><span>Active users:</span> <strong>500+</strong></div>
+                            <div><span>Invoices:</span> <strong>2,100+</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, transparent pricing</h2>
+                <p>Free to start. Upgrade when you need more.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">₦0</div>
+                    <p class="billing">per month</p>
+                    <p class="description">Perfect for getting started</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <strong>2 free invoices</strong> per month</li>
+                        <li><i class="fas fa-check"></i> Web form invoice creation</li>
+                        <li><i class="fas fa-check"></i> PDF download with watermark</li>
+                        <li><i class="fas fa-check"></i> Standard template</li>
+                        <li><i class="fas fa-check"></i> Basic tax compliance</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Custom logo & branding</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Unlimited saved invoices</li>
+                        <li class="disabled"><i class="fas fa-times"></i> WhatsApp invoicing</li>
+                    </ul>
+                    <a href="dashboard.html?signup=true" class="btn-plan">Get Started</a>
+                </div>
+
+                <!-- Pro Plan Nigeria -->
+                <div class="pricing-card featured">
+                    <div class="popular-tag">🔥 MOST POPULAR</div>
+                    <h3>Pro - Nigeria</h3>
+                    <div class="price">₦3,500</div>
+                    <p class="billing">per month</p>
+                    <p class="description">For Nigerian professionals & businesses</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <strong>Unlimited invoices</strong></li>
+                        <li><i class="fas fa-check"></i> Web form + WhatsApp invoicing</li>
+                        <li><i class="fas fa-check"></i> <strong>No watermark</strong> on PDFs</li>
+                        <li><i class="fas fa-check"></i> Custom logo & branding</li>
+                        <li><i class="fas fa-check"></i> Unlimited saved invoices</li>
+                        <li><i class="fas fa-check"></i> Monthly tax summary export</li>
+                        <li><i class="fas fa-check"></i> Nigeria VAT compliance (7.5%)</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="dashboard.html?signup=true&plan=pro_ng" class="btn-upgrade">Upgrade to Pro</a>
+                </div>
+
+                <!-- Pro Plan International -->
+                <div class="pricing-card">
+                    <h3>Pro - Global</h3>
+                    <div class="price">$5</div>
+                    <p class="billing">per month</p>
+                    <p class="description">For international professionals</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <strong>Unlimited invoices</strong></li>
+                        <li><i class="fas fa-check"></i> Web form + WhatsApp invoicing</li>
+                        <li><i class="fas fa-check"></i> <strong>No watermark</strong> on PDFs</li>
+                        <li><i class="fas fa-check"></i> Custom logo & branding</li>
+                        <li><i class="fas fa-check"></i> Unlimited saved invoices</li>
+                        <li><i class="fas fa-check"></i> Monthly tax summary export</li>
+                        <li><i class="fas fa-check"></i> Multi-currency support</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="dashboard.html?signup=true&plan=pro_intl" class="btn-plan">Upgrade to Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Loved by freelancers</h2>
+                <p>Join thousands of happy users</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"I wish I had this tool in my early freelance years — would have saved me plenty wahala. SMEs too go love am."</p>
+                    <div class="testimonial-author">
+                        <strong>Chidi O.</strong>
+                        <span>Freelance Developer, Lagos</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"It works like a charm, and the invoices land sharp-sharp every time. Solid for a small business like mine."</p>
+                    <div class="testimonial-author">
+                        <strong>Ama K.</strong>
+                        <span>Small Business Owner, Accra</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Finally a tool that understands how Nigeria actually pays. VAT compliance built-in is a game changer!"</p>
+                    <div class="testimonial-author">
+                        <strong>Emeka N.</strong>
+                        <span>Consultant, Abuja</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently asked questions</h2>
+                <p>Got questions? We've got answers.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How many free invoices do I get?</h3>
+                    <p>The free plan includes 2 invoices per month. Perfect for trying out the platform.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is QuickInvoice compliant with Nigeria's VAT rules?</h3>
+                    <p>Yes. VAT defaults to 7.5% and can be adjusted. TIN placeholders are built into invoices.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I save my invoices?</h3>
+                    <p>Yes! Create a free account and save all your invoices to access them anytime.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept Paystack (Nigeria) and international payments via Selar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to create professional invoices?</h2>
+                <p>Join 500+ freelancers already using QuickInvoice</p>
+                <a href="dashboard.html?signup=true" class="btn-cta">
+                    <i class="fas fa-bolt"></i> Start Creating Free
+                </a>
+                <p class="cta-note">Free tier includes 2 invoices per month. No credit card required.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
                     <div class="logo-icon">⚡</div>
-                    <h2>QuickInvoice</h2>
+                    <h3>QuickInvoice</h3>
+                    <p>Professional invoicing made simple for African businesses</p>
                 </div>
-                <div class="nav-actions">
-                    <button class="btn-outline" onclick="showAuthModal('login')">
-                        <i class="fas fa-sign-in-alt"></i> Login
-                    </button>
-                    <button class="btn-primary" onclick="showAuthModal('signup')">
-                        <i class="fas fa-user-plus"></i> Sign Up Free
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Create Professional Invoices <span class="gradient-text">in Minutes</span></h1>
-                <p>Free invoice generator with real-time preview, PDF download, and professional templates. No credit card required.</p>
-                <div class="hero-buttons">
-                    <button class="btn-large" onclick="scrollToBuilder()">
-                        <i class="fas fa-pen-ruler"></i> Start Creating Free
-                    </button>
-                    <button class="btn-large-outline" onclick="showAuthModal('signup')">
-                        <i class="fas fa-crown"></i> Upgrade to PRO
-                    </button>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-check-circle"></i> Used by 10,000+ freelancers
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="container">
-                <h2>Why Choose QuickInvoice?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Lightning Fast</h3>
-                        <p>Create invoices in seconds with our intuitive builder</p>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="dashboard.html">Create Invoice</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#">How it works</a>
                     </div>
-                    <div class="feature-card">
-                        <i class="fas fa-file-pdf"></i>
-                        <h3>PDF Export</h3>
-                        <p>Download professional PDF invoices instantly</p>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
                     </div>
-                    <div class="feature-card">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <h3>Cloud Storage</h3>
-                        <p>Save and access your invoices from anywhere</p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-whatsapp"></i>
-                        <h3>WhatsApp Sharing</h3>
-                        <p>Share invoices directly with clients</p>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">VAT Compliance</a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Invoice Builder Section (Embedded on Landing Page) -->
-        <section id="builderSection" class="builder-section">
-            <div class="container">
-                <h2>Create Your Invoice</h2>
-                <p class="section-subtitle">Try it now - no account needed</p>
-
-                <div class="builder-grid">
-                    <!-- Form Section -->
-                    <div class="card">
-                        <div class="card-header">
-                            <i class="fas fa-file-invoice"></i>
-                            <h3>Invoice Details</h3>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-building"></i> Business Name *</label>
-                            <input type="text" id="businessName" placeholder="Your business name">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-image"></i> Logo (optional)</label>
-                            <input type="file" id="logoUpload" accept="image/*">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-user"></i> Client Name *</label>
-                            <input type="text" id="clientName" placeholder="Client name">
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <label><i class="fas fa-envelope"></i> Client Email</label>
-                                <input type="email" id="clientEmail" placeholder="client@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-hashtag"></i> Invoice Number</label>
-                                <input type="text" id="invoiceNumber" placeholder="Auto-generated">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-map-marker-alt"></i> Client Address</label>
-                            <textarea id="clientAddress" rows="2" placeholder="Full address"></textarea>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <label><i class="fas fa-calendar"></i> Date</label>
-                                <input type="date" id="invoiceDate">
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-money-bill-wave"></i> Currency</label>
-                                <select id="currency">
-                                    <option value="₦">Nigerian Naira (₦)</option>
-                                    <option value="$">US Dollar ($)</option>
-                                    <option value="£">British Pound (£)</option>
-                                    <option value="€">Euro (€)</option>
-                                    <option value="¥">Japanese Yen (¥)</option>
-                                    <option value="₵">Ghanaian Cedi (₵)</option>
-                                    <option value="KSh">Kenyan Shilling (KSh)</option>
-                                    <option value="R">South African Rand (R)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-list"></i> Invoice Items</label>
-                            <div class="items-table">
-                                <div id="itemsContainer"></div>
-                            </div>
-                            <button type="button" class="btn-add" onclick="addItem()">
-                                <i class="fas fa-plus"></i> Add Item
-                            </button>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <label><i class="fas fa-percent"></i> Tax Rate (%)</label>
-                                <input type="number" id="taxRate" value="0" step="0.1">
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-tag"></i> Discount</label>
-                                <input type="number" id="discount" value="0" step="1" placeholder="Amount">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-sticky-note"></i> Notes</label>
-                            <textarea id="notes" rows="2" placeholder="Payment terms, thank you note..."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Preview Section -->
-                    <div class="card">
-                        <div class="card-header">
-                            <i class="fas fa-eye"></i>
-                            <h3>Live Preview</h3>
-                        </div>
-                        <div id="invoicePreview"></div>
-
-                        <div class="action-buttons">
-                            <button class="btn-save" onclick="promptToSave()">
-                                <i class="fas fa-save"></i> Save Invoice
-                            </button>
-                            <button class="btn-pdf" onclick="downloadPDF()">
-                                <i class="fas fa-file-pdf"></i> Download PDF
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section class="pricing-section">
-            <div class="container">
-                <h2>Simple, Transparent Pricing</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Free</h3>
-                        <div class="pricing-price">₦0</div>
-                        <p class="pricing-description">Perfect for getting started</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Create unlimited invoices</li>
-                            <li><i class="fas fa-check"></i> PDF download with watermark</li>
-                            <li><i class="fas fa-check"></i> Save up to 5 invoices</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Remove watermark</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Unlimited storage</li>
-                        </ul>
-                    </div>
-
-                    <div class="pricing-card featured">
-                        <div class="popular-tag">🔥 MOST POPULAR</div>
-                        <h3>PRO</h3>
-                        <div class="pricing-price">₦29,000<span>/month</span></div>
-                        <p class="pricing-description">For professionals & businesses</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Everything in Free</li>
-                            <li><i class="fas fa-check"></i> <strong>No watermark</strong> on PDFs</li>
-                            <li><i class="fas fa-check"></i> Unlimited saved invoices</li>
-                            <li><i class="fas fa-check"></i> Premium invoice templates</li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
-                        </ul>
-                        <button class="btn-upgrade" onclick="showAuthModal('signup')">
-                            Get Started
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
+            <div class="footer-bottom">
                 <p>&copy; 2024 QuickInvoice - Professional Invoicing Made Simple</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Auth Modal (Popup for Login/Signup) -->
-    <div id="authModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Save Your Invoice</h2>
-                <button class="modal-close" onclick="closeAuthModal()">&times;</button>
-            </div>
-            <p class="modal-description">Create an account to save your invoice and access it anytime</p>
-
-            <div class="auth-tabs">
-                <button class="auth-tab active" onclick="switchAuthTab('login')">Login</button>
-                <button class="auth-tab" onclick="switchAuthTab('signup')">Create Account</button>
-            </div>
-
-            <!-- Login Form -->
-            <div id="modalLoginForm" class="auth-form active">
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="modalLoginEmail" placeholder="you@example.com">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" id="modalLoginPassword" placeholder="Enter your password">
-                </div>
-                <button class="btn-submit" onclick="modalLogin()">
-                    <i class="fas fa-sign-in-alt"></i> Login & Save
-                </button>
-            </div>
-
-            <!-- Signup Form -->
-            <div id="modalSignupForm" class="auth-form">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="modalSignupName" placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="modalSignupEmail" placeholder="you@example.com">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" id="modalSignupPassword" placeholder="Minimum 6 characters">
-                </div>
-                <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" id="modalSignupConfirmPassword" placeholder="Confirm password">
-                </div>
-                <button class="btn-submit" onclick="modalSignup()">
-                    <i class="fas fa-user-plus"></i> Create Account & Save
-                </button>
-            </div>
-
-            <div id="authModalMessage" class="auth-message"></div>
-        </div>
-    </div>
-
-    <!-- Main App (After Login) -->
-    <div id="mainApp" style="display: none;">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-icon">⚡</div>
-                    <h2>QuickInvoice</h2>
-                </div>
-                <div class="nav-links">
-                    <button class="nav-btn active" onclick="showAppPage('builder')">
-                        <i class="fas fa-pen-ruler"></i> Create Invoice
-                    </button>
-                    <button class="nav-btn" onclick="showAppPage('invoices')">
-                        <i class="fas fa-folder-open"></i> My Invoices
-                    </button>
-                    <button class="nav-btn" onclick="showAppPage('upgrade')">
-                        <i class="fas fa-crown"></i> Upgrade
-                    </button>
-                </div>
-                <div class="user-section">
-                    <i class="fas fa-user-circle"></i>
-                    <span id="userNameDisplay" class="user-name"></span>
-                    <span id="proBadge" class="badge free">Free Plan</span>
-                    <button class="btn-logout" onclick="logout()">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Invoice Builder Page (App Version) -->
-        <div id="appBuilderPage" class="app-page active">
-            <div class="container">
-                <div class="builder-grid">
-                    <div class="card">
-                        <div class="card-header">
-                            <i class="fas fa-file-invoice"></i>
-                            <h3>Invoice Information</h3>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-building"></i> Business Name *</label>
-                            <input type="text" id="appBusinessName" placeholder="Enter your business name">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-image"></i> Logo (optional)</label>
-                            <input type="file" id="appLogoUpload" accept="image/*">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-user"></i> Client Name *</label>
-                            <input type="text" id="appClientName" placeholder="Enter client name">
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <label><i class="fas fa-envelope"></i> Client Email</label>
-                                <input type="email" id="appClientEmail" placeholder="client@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-hashtag"></i> Invoice Number</label>
-                                <input type="text" id="appInvoiceNumber" placeholder="Auto-generated">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-map-marker-alt"></i> Client Address</label>
-                            <textarea id="appClientAddress" rows="2" placeholder="Full address"></textarea>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <label><i class="fas fa-calendar"></i> Date</label>
-                                <input type="date" id="appInvoiceDate">
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-money-bill-wave"></i> Currency</label>
-                                <select id="appCurrency">
-                                    <option value="₦">Nigerian Naira (₦)</option>
-                                    <option value="$">US Dollar ($)</option>
-                                    <option value="£">British Pound (£)</option>
-                                    <option value="€">Euro (€)</option>
-                                    <option value="¥">Japanese Yen (¥)</option>
-                                    <option value="₵">Ghanaian Cedi (₵)</option>
-                                    <option value="KSh">Kenyan Shilling (KSh)</option>
-                                    <option value="R">South African Rand (R)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-list"></i> Invoice Items</label>
-                            <div class="items-table">
-                                <div id="appItemsContainer"></div>
-                            </div>
-                            <button type="button" class="btn-add" onclick="addAppItem()">
-                                <i class="fas fa-plus"></i> Add Item
-                            </button>
-                        </div>
-
-                        <div class="row">
-                            <div class="form-group">
-                                <label><i class="fas fa-percent"></i> Tax Rate (%)</label>
-                                <input type="number" id="appTaxRate" value="0" step="0.1">
-                            </div>
-                            <div class="form-group">
-                                <label><i class="fas fa-tag"></i> Discount</label>
-                                <input type="number" id="appDiscount" value="0" step="1" placeholder="Amount">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-sticky-note"></i> Notes</label>
-                            <textarea id="appNotes" rows="2" placeholder="Payment terms, thank you note..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <i class="fas fa-eye"></i>
-                            <h3>Live Preview</h3>
-                        </div>
-                        <div id="appInvoicePreview"></div>
-
-                        <div class="action-buttons">
-                            <button class="btn-save" onclick="saveInvoiceToAccount()">
-                                <i class="fas fa-save"></i> Save Invoice
-                            </button>
-                            <button class="btn-pdf" onclick="downloadAppPDF()">
-                                <i class="fas fa-file-pdf"></i> Download PDF
-                            </button>
-                        </div>
-
-                        <div id="appMessage" class="message"></div>
-                    </div>
+                <div class="country-badges">
+                    <span>🇳🇬 Nigeria</span>
+                    <span>🇬🇭 Ghana</span>
+                    <span>🇰🇪 Kenya</span>
+                    <span>🌍 150+ currencies</span>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!-- My Invoices Page -->
-        <div id="appInvoicesPage" class="app-page">
-            <div class="container">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-history"></i>
-                        <h3>My Saved Invoices</h3>
-                    </div>
-                    <div id="invoicesList" class="invoices-list"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Upgrade Page -->
-        <div id="appUpgradePage" class="app-page">
-            <div class="container">
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Free</h3>
-                        <div class="pricing-price">₦0</div>
-                        <p class="pricing-description">Perfect for getting started</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Create unlimited invoices</li>
-                            <li><i class="fas fa-check"></i> PDF download with watermark</li>
-                            <li><i class="fas fa-check"></i> Save up to 5 invoices</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Remove watermark</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Unlimited storage</li>
-                        </ul>
-                    </div>
-
-                    <div class="pricing-card featured">
-                        <div class="popular-tag">🔥 MOST POPULAR</div>
-                        <h3>PRO</h3>
-                        <div class="pricing-price">₦29,000<span>/month</span></div>
-                        <p class="pricing-description">For professionals & businesses</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Everything in Free</li>
-                            <li><i class="fas fa-check"></i> <strong>No watermark</strong> on PDFs</li>
-                            <li><i class="fas fa-check"></i> Unlimited saved invoices</li>
-                            <li><i class="fas fa-check"></i> Premium invoice templates</li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
-                        </ul>
-                        <div class="payment-buttons">
-                            <button class="btn-paystack" onclick="upgradeWithPaystack()">
-                                <i class="fab fa-paystack"></i> Pay with Paystack
-                            </button>
-                            <button class="btn-selar" onclick="upgradeWithSelar()">
-                                <i class="fas fa-globe"></i> Pay with Selar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 </html>

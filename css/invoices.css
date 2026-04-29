@@ -1,0 +1,142 @@
+/* ============================================
+   MY INVOICES PAGE - Fidbacc Style
+   ============================================ */
+
+.invoices-list {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.invoice-item {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--bg-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.invoice-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+    border-color: var(--primary-light);
+}
+
+.invoice-info strong {
+    font-size: 1rem;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.invoice-info small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.invoice-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.btn-icon:hover {
+    color: var(--primary-color);
+    background: var(--bg-light);
+}
+
+.invoice-count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--bg-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-4xl);
+    color: var(--text-muted);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.empty-state p {
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-create {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-create:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Modal Invoice Preview */
+#modalInvoiceContent .invoice-preview {
+    margin: 0;
+    border-radius: 0;
+}
+
+#modalInvoiceContent .preview-header {
+    border-radius: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .invoice-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .invoice-actions {
+        justify-content: center;
+    }
+
+    .empty-state {
+        padding: var(--spacing-2xl);
+    }
+
+    .empty-state i {
+        font-size: 3rem;
+    }
+}

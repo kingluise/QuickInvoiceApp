@@ -1,0 +1,281 @@
+/* ============================================
+   DASHBOARD (LOGIN/SIGNUP) - Fidbacc Style
+   ============================================ */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    padding: var(--spacing-xl);
+}
+
+.auth-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    width: 100%;
+    max-width: 450px;
+    box-shadow: var(--shadow-2xl);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.auth-header .logo-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    margin: 0 auto var(--spacing-md);
+    background: var(--primary-gradient);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.auth-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xs);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-xl);
+    background: var(--bg-light);
+    padding: 0.25rem;
+    border-radius: var(--radius-md);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+}
+
+.tab-btn.active {
+    background: var(--bg-white);
+    color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: var(--spacing-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-message {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    display: none;
+}
+
+.auth-message.show {
+    display: block;
+}
+
+.auth-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid var(--danger-color);
+}
+
+.auth-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid var(--success-color);
+}
+
+.auth-footer {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Add to end of existing dashboard.css */
+
+/* Forgot Password */
+.forgot-password {
+    text-align: right;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.forgot-password a {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Forgot Password Modal */
+.forgot-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-modal-content {
+    background: var(--bg-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-xl);
+    max-width: 400px;
+    width: 90%;
+    box-shadow: var(--shadow-2xl);
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.forgot-modal-content h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.forgot-modal-content p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-lg);
+}
+
+.forgot-modal-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.forgot-modal-actions .btn-secondary {
+    flex: 1;
+    padding: var(--spacing-md);
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.forgot-modal-actions .btn-primary {
+    flex: 1;
+    padding: var(--spacing-md);
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.forgot-modal-actions .btn-secondary:hover {
+    background: var(--border-color);
+}
+
+.forgot-modal-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: var(--spacing-lg);
+    }
+
+    .auth-header h2 {
+        font-size: 1.5rem;
+    }
+}

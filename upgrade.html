@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickInvoice | Upgrade to PRO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/upgrade.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="app-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="invoice-builder.html" class="logo-link">
+                    <div class="logo-icon">⚡</div>
+                    <h2>QuickInvoice</h2>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="invoice-builder.html" class="nav-link">Create Invoice</a>
+                <a href="my-invoices.html" class="nav-link">My Invoices</a>
+                <a href="upgrade.html" class="nav-link active">Upgrade</a>
+            </div>
+            <div class="user-section">
+                <i class="fas fa-user-circle"></i>
+                <span id="userNameDisplay" class="user-name"></span>
+                <span id="proBadge" class="badge free">Free Plan</span>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="upgrade-header">
+            <h1>Upgrade to <span class="gradient-text">PRO</span></h1>
+            <p>Get unlimited invoices and premium features</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Free Plan -->
+            <div class="pricing-card">
+                <h3>Free</h3>
+                <div class="price">₦0</div>
+                <p class="billing">per month</p>
+                <p class="description">Perfect for getting started</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>2 free invoices</strong> per month</li>
+                    <li><i class="fas fa-check"></i> Web form invoice creation</li>
+                    <li><i class="fas fa-check"></i> PDF download with watermark</li>
+                    <li><i class="fas fa-check"></i> Standard template</li>
+                    <li><i class="fas fa-check"></i> Basic tax compliance</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Custom logo & branding</li>
+                    <li class="disabled"><i class="fas fa-times"></i> Unlimited saved invoices</li>
+                    <li class="disabled"><i class="fas fa-times"></i> WhatsApp invoicing</li>
+                </ul>
+                <div class="current-plan" id="freeCurrentPlan">Current Plan</div>
+            </div>
+
+            <!-- Pro Plan Nigeria -->
+            <div class="pricing-card featured">
+                <div class="popular-tag">🔥 MOST POPULAR</div>
+                <h3>Pro - Nigeria</h3>
+                <div class="price">₦3,500</div>
+                <p class="billing">per month</p>
+                <p class="description">For Nigerian professionals & businesses</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>Unlimited invoices</strong></li>
+                    <li><i class="fas fa-check"></i> Web form + WhatsApp invoicing</li>
+                    <li><i class="fas fa-check"></i> <strong>No watermark</strong> on PDFs</li>
+                    <li><i class="fas fa-check"></i> Custom logo & branding</li>
+                    <li><i class="fas fa-check"></i> Unlimited saved invoices</li>
+                    <li><i class="fas fa-check"></i> Monthly tax summary export</li>
+                    <li><i class="fas fa-check"></i> Nigeria VAT compliance (7.5%)</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                </ul>
+                <div class="payment-buttons">
+                    <button class="btn-paystack" onclick="upgradeWithPaystack('ng')">
+                        <i class="fab fa-paystack"></i> Pay with Paystack
+                    </button>
+                    <button class="btn-selar" onclick="upgradeWithSelar('ng')">
+                        <i class="fas fa-globe"></i> Pay with Selar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pro Plan International -->
+            <div class="pricing-card">
+                <h3>Pro - Global</h3>
+                <div class="price">$5</div>
+                <p class="billing">per month</p>
+                <p class="description">For international professionals</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>Unlimited invoices</strong></li>
+                    <li><i class="fas fa-check"></i> Web form + WhatsApp invoicing</li>
+                    <li><i class="fas fa-check"></i> <strong>No watermark</strong> on PDFs</li>
+                    <li><i class="fas fa-check"></i> Custom logo & branding</li>
+                    <li><i class="fas fa-check"></i> Unlimited saved invoices</li>
+                    <li><i class="fas fa-check"></i> Monthly tax summary export</li>
+                    <li><i class="fas fa-check"></i> Multi-currency support</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                </ul>
+                <div class="payment-buttons">
+                    <button class="btn-paystack" onclick="upgradeWithPaystack('intl')">
+                        <i class="fab fa-paystack"></i> Pay with Paystack
+                    </button>
+                    <button class="btn-selar" onclick="upgradeWithSelar('intl')">
+                        <i class="fas fa-globe"></i> Pay with Selar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="upgradeMessage" class="upgrade-message"></div>
+
+        <div class="upgrade-faq">
+            <h3>Frequently asked questions</h3>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>What happens when I upgrade?</h4>
+                    <p>You get unlimited invoices, no watermark, custom branding, and priority support.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I cancel anytime?</h4>
+                    <p>Yes, you can cancel your subscription at any time from your account settings.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept Paystack (card, bank transfer, USSD) and Selar for international payments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/upgrade.js"></script>
+</body>
+</html>
